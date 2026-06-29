@@ -277,6 +277,21 @@ body.menu .burger span:nth-child(3){top:19px;transform:rotate(-45deg)}
 .pull-who{margin-top:1.3rem;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--sand)}
 .rep-cta{margin-top:1.8rem;display:flex;gap:.7rem;flex-wrap:wrap}
 .rep-cta .btn{padding:.7rem 1.3rem;font-size:.9rem}
+/* reviews head + cards */
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem}
+.rating-badge{display:flex;align-items:center;gap:1rem;background:rgba(200,100,60,.08);border:1px solid var(--line-warm);border-radius:14px;padding:1rem 1.4rem}
+.rating-badge .rb-score{font-family:var(--fd);font-weight:900;font-size:2.6rem;color:var(--clay-glow);line-height:1}
+.rating-badge .rb-stars{color:var(--clay);font-size:1.1rem;letter-spacing:.1em}
+.rating-badge .rb-src{font-size:.76rem;color:var(--ink-dim)}
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2.8rem}
+.rev{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;position:relative}
+.rev .qm{position:absolute;top:.4rem;right:1.3rem;font-family:var(--fd);font-weight:900;font-size:4rem;color:var(--clay);opacity:.14;line-height:1}
+.rev .rstars{color:var(--clay-glow);margin-bottom:.7rem;letter-spacing:.08em}
+.rev p{color:var(--ink-dim);line-height:1.7;margin-bottom:1.1rem;font-size:.97rem}
+.rev .who{display:flex;align-items:center;gap:.6rem;font-size:.82rem;font-weight:700;color:var(--sand)}
+.rev .who .g{width:18px;height:18px;flex:0 0 auto;border-radius:50%;background:conic-gradient(from -45deg,#4285F4 0 25%,#EA4335 25% 50%,#FBBC05 50% 75%,#34A853 75% 100%);box-shadow:0 0 0 3px var(--bg) inset}
+.rev .who .src{color:var(--ink-dim);font-weight:500;text-transform:none;letter-spacing:0}
+.rev-cta{margin-top:2.4rem;display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
 
 /* ── QUOTE ── */
 .quote{background:var(--bg)}
@@ -349,6 +364,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;
   .proc-media{aspect-ratio:3/2;margin-bottom:1.5rem}
   .proc-step{opacity:1}
   .rep-card{max-width:420px;margin:0 auto}
+  .rev-grid{grid-template-columns:1fr}
 }
 @media(max-width:680px){
   .nav-links{
@@ -548,25 +564,48 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;
 
 <div class="tilestrip"></div>
 
-<!-- REVIEWS / REPUTATION -->
+<!-- REVIEWS -->
 <section class="rep" id="reviews">
-  <div class="wrap rep-grid">
-    <div class="rep-card rv">
-      <div class="big">5.0★</div>
-      <div class="stars-row">★★★★★</div>
-      <div class="sub">51 Google Reviews</div>
-      <div class="div"></div>
-      <div class="yr">A+ BBB · 25 Yrs</div>
-      <div class="sub">Rated &amp; Trusted</div>
-    </div>
-    <div>
-      <span class="eyebrow rv">What Customers Say</span>
-      <h2 class="h-title rv d1" style="margin-bottom:1.4rem">A Perfect <em>5.0</em> on Google</h2>
-      <p class="lede rv d2">Brett's work speaks for itself — a <strong style="color:var(--ink)">perfect 5.0-star average across 51 Google reviews</strong>, an A+ rating from the BBB, and 25 years in the trade. Tile done right, one careful job at a time.</p>
-      <div class="rep-cta rv d3">
-        <a href="https://www.google.com/maps/search/Tile+Craftworks+Brainerd+MN" target="_blank" rel="noopener" class="btn btn-clay">Read Our 51 Google Reviews →</a>
-        <a href="https://www.facebook.com/TileCraftworks/" target="_blank" rel="noopener" class="btn btn-ghost">See Work on Facebook</a>
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <span class="eyebrow rv">What Customers Say</span>
+        <h2 class="h-title rv d1">A Perfect <em>5.0</em> on Google</h2>
       </div>
+      <div class="rating-badge rv d1">
+        <div class="rb-score">5.0</div>
+        <div><div class="rb-stars">★★★★★</div><div class="rb-src">51 Google reviews · A+ BBB</div></div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev rv">
+        <span class="qm">"</span>
+        <div class="rstars">★★★★★</div>
+        <p>Can't say enough good things about Brett and his work. He was extremely responsive and always showed up on time. His work is amazing and very fair for the price. To find ALL of these qualities nowadays is unheard of, so I am so thankful I used him and will continue to refer him to friends and family. Thanks, Brett!</p>
+        <div class="who"><span class="g"></span>Heather Berg <span class="src">· Google review</span></div>
+      </div>
+      <div class="rev rv d1">
+        <span class="qm">"</span>
+        <div class="rstars">★★★★★</div>
+        <p>Brett from Tile Craftworks helped us remodel our home. He is very professional and helpful. Brett had a lot of great ideas and his work is nothing short of perfection. I would call no one else when it comes to our next tile project!!</p>
+        <div class="who"><span class="g"></span>Ryan Blank <span class="src">· Google review</span></div>
+      </div>
+      <div class="rev rv">
+        <span class="qm">"</span>
+        <div class="rstars">★★★★★</div>
+        <p>We contacted Brett about redoing the floor in our bathroom and couldn't be happier with the result! He was able to replace our old hardwood with new tile in a few days and the floor looks amazing. I would have no problem recommending him to anybody and would gladly have him in our home in the future.</p>
+        <div class="who"><span class="g"></span>Hunter Kleinschmidt <span class="src">· Google review</span></div>
+      </div>
+      <div class="rev rv d1">
+        <span class="qm">"</span>
+        <div class="rstars">★★★★★</div>
+        <p>Brett tiled our backsplash. He was easy to work with, efficient, well priced, and did great work! We highly recommend him for your renovation/tiling needs.</p>
+        <div class="who"><span class="g"></span>Oliver Hinchley <span class="src">· Google review</span></div>
+      </div>
+    </div>
+    <div class="rev-cta rv">
+      <a href="https://www.google.com/maps/search/Tile+Craftworks+Brainerd+MN" target="_blank" rel="noopener" class="btn btn-clay">Read All 51 on Google →</a>
+      <a href="#quote" class="btn btn-ghost">Get a Free Quote</a>
     </div>
   </div>
 </section>
