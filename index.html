@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Craftworks | Custom Tile, Showers & Backsplashes — Brainerd Lakes, MN</title>
+<meta name="description" content="Tile Craftworks — handcrafted custom tile across the Brainerd Lakes area. Showers, backsplashes, bathroom & kitchen floors. 25 years of craftsmanship, A+ BBB rated. Free quotes — call Brett: (612) 723-6627.">
+<meta name="theme-color" content="#15110E">
+<meta property="og:title" content="Tile Craftworks | Brainerd Lakes, MN">
+<meta property="og:description" content="Handcrafted custom tile — showers, backsplashes, floors & kitchens. 25 years of craftsmanship, A+ BBB rated. Serving the Brainerd Lakes area.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero.jpg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://elitanz.github.io/tile-craftworks/",
+  "name":"Tile Craftworks, LLC",
+  "image":"https://elitanz.github.io/tile-craftworks/images/hero.jpg",
+  "telephone":"+16127236627",
+  "founder":"Brett Dean",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Pequot Lakes",
+    "addressRegion":"MN",
+    "postalCode":"56472",
+    "addressCountry":"US"
+  },
+  "areaServed":"Brainerd Lakes area — Nisswa, Pequot Lakes, Brainerd, Crosslake & surrounding MN communities",
+  "url":"https://elitanz.github.io/tile-craftworks/",
+  "description":"Custom tile installation across the Brainerd Lakes area — showers, backsplashes, bathroom and kitchen floors. 25 years of craftsmanship. A+ rated by the BBB. Serving Nisswa, Pequot Lakes, Brainerd, Crosslake and surrounding communities.",
+  "foundingDate":"2016",
+  "sameAs":["https://www.facebook.com/TileCraftworks/"],
+  "openingHours":"Mo-Fr 08:00-17:00"
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#15110E;
+  --bg2:#1C1714;
+  --bg3:#241D18;
+  --ink:#F2EBE1;
+  --ink-dim:#B0A599;
+  --clay:#C8643C;
+  --clay-glow:#E0825A;
+  --glaze:#4E8C84;
+  --sand:#D9C4A8;
+  --line:rgba(255,255,255,0.08);
+  --line-warm:rgba(200,100,60,0.24);
+  --radius:14px;
+  --maxw:1180px;
+  --fd:'Fraunces',serif;
+  --fb:'Hanken Grotesk',sans-serif;
+  --fm:'Space Mono',monospace;
+}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--fb);line-height:1.7;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--clay);color:#16110D}
+
+/* ── shared ── */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 6vw}
+section{padding:clamp(4.5rem,9vw,8rem) 0}
+.eyebrow{
+  font-family:var(--fm);font-size:.72rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--clay-glow);
+  display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;
+}
+.eyebrow::before{content:'';width:26px;height:2px;background:var(--clay)}
+.h-title{
+  font-family:var(--fd);font-weight:700;line-height:1.02;
+  letter-spacing:-.01em;
+  font-size:clamp(2.3rem,5.2vw,3.8rem);color:var(--ink);
+}
+.h-title em{font-style:italic;font-weight:500;color:var(--clay-glow)}
+.lede{color:var(--ink-dim);font-size:clamp(1rem,1.4vw,1.13rem);max-width:56ch;line-height:1.8}
+
+/* ── signature glazed-tile mosaic band ── */
+.tilestrip{
+  height:14px;width:100%;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--clay) 0 14px, transparent 14px 16px,
+      var(--glaze) 16px 30px, transparent 30px 32px,
+      var(--sand) 32px 46px, transparent 46px 48px,
+      var(--clay-glow) 48px 62px, transparent 62px 64px);
+  background-color:var(--bg);
+  border-top:3px solid var(--bg);border-bottom:3px solid var(--bg);
+  opacity:.92;
+}
+
+/* ── NAV (always solid) ── */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:120;height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;
+  background:rgba(21,17,14,.93);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  transition:height .3s,background .3s;
+}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:var(--fd);font-weight:700;font-size:1.4rem;letter-spacing:.005em}
+.brand .glyph{
+  width:28px;height:28px;border-radius:6px;flex:0 0 auto;overflow:hidden;
+  background:
+    conic-gradient(from 0deg, var(--clay) 0 25%, var(--sand) 25% 50%, var(--glaze) 50% 75%, var(--clay-glow) 75% 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.12) inset, 0 4px 14px rgba(200,100,60,.3);
+}
+.brand b{color:var(--clay-glow);font-weight:700}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-dim);transition:color .2s;font-family:var(--fb)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--clay);color:#16110D !important;padding:.55rem 1.2rem;border-radius:8px;
+  font-weight:700 !important;transition:background .2s,transform .15s !important;
+}
+.nav-cta:hover{background:var(--clay-glow);transform:translateY(-1px)}
+.nav-tel{color:var(--ink) !important}
+.nav-tel:hover{color:var(--clay-glow) !important}
+.burger{display:none;width:44px;height:40px;position:relative;background:none;border:1px solid var(--line-warm);border-radius:8px;cursor:pointer}
+.burger span{position:absolute;left:11px;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger span:nth-child(1){top:14px}
+.burger span:nth-child(2){top:19px}
+.burger span:nth-child(3){top:24px}
+body.menu .burger span:nth-child(1){top:19px;transform:rotate(45deg)}
+body.menu .burger span:nth-child(2){opacity:0}
+body.menu .burger span:nth-child(3){top:19px;transform:rotate(-45deg)}
+
+/* ── HERO (clean image, 3 elements) ── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:120%;object-fit:cover;object-position:center 40%;will-change:transform}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(95deg,rgba(21,17,14,.93) 0%,rgba(21,17,14,.6) 46%,rgba(21,17,14,.34) 100%),
+    linear-gradient(0deg,rgba(21,17,14,.96) 2%,transparent 40%);
+}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero .eyebrow{margin-bottom:1.4rem;animation:rise .7s .1s both}
+.hero h1{
+  font-family:var(--fd);font-weight:900;
+  font-size:clamp(3rem,9vw,6.6rem);line-height:.98;letter-spacing:-.02em;
+  animation:rise .7s .22s both;
+}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--clay-glow);text-shadow:0 0 44px rgba(200,100,60,.3)}
+.hero .lede{margin:1.6rem 0 2.4rem;animation:rise .7s .34s both}
+.hero-cta{animation:rise .7s .46s both;display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;
+  font-weight:700;font-size:1rem;border-radius:9px;padding:1rem 2rem;
+  transition:transform .15s,background .2s,border-color .2s,box-shadow .2s;border:1.6px solid transparent;
+  font-family:var(--fb);
+}
+.btn-clay{background:var(--clay);color:#16110D;box-shadow:0 10px 30px -10px rgba(200,100,60,.6)}
+.btn-clay:hover{background:var(--clay-glow);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--clay);background:rgba(200,100,60,.08);transform:translateY(-2px)}
+.scroll-cue{position:absolute;left:6vw;bottom:2rem;z-index:2;display:flex;align-items:center;gap:.7rem;color:var(--ink-dim);font-family:var(--fm);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;animation:rise .7s .8s both}
+.scroll-cue .rail{width:2px;height:34px;background:rgba(255,255,255,.18);border-radius:2px;overflow:hidden;position:relative}
+.scroll-cue .rail::after{content:'';position:absolute;top:-34px;left:0;width:100%;height:34px;background:linear-gradient(transparent,var(--clay));animation:dot 1.8s 1s ease-in-out infinite}
+@keyframes dot{to{top:34px}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* ── STATS STRIP ── */
+.stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats .wrap{padding-top:2.6rem;padding-bottom:2.6rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat .n{font-family:var(--fd);font-weight:900;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1;color:var(--clay-glow)}
+.stat .l{font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-dim);margin-top:.5rem}
+.stat+.stat{border-left:1px solid var(--line)}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.about-photo{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.about-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.about-photo:hover img{transform:scale(1.05)}
+.about-photo .tag{
+  position:absolute;left:1.1rem;bottom:1.1rem;display:flex;align-items:center;gap:.7rem;
+  background:rgba(21,17,14,.84);backdrop-filter:blur(8px);border:1px solid var(--line-warm);
+  border-radius:10px;padding:.7rem 1rem;
+}
+.about-photo .tag .s{font-family:var(--fd);font-weight:900;font-size:1.7rem;color:var(--clay-glow);line-height:1}
+.about-photo .tag .t{font-size:.72rem;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(200,100,60,.08);border:1px solid var(--line-warm);border-radius:100px;padding:.45rem .95rem;font-size:.82rem;font-weight:600;color:var(--sand)}
+.badge svg{width:15px;height:15px;color:var(--clay-glow)}
+.about p+p{margin-top:1rem}
+
+/* ── SERVICES ── */
+.services{background:var(--bg2)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:3rem}
+.svc{background:var(--bg);padding:clamp(1.8rem,3vw,2.6rem);position:relative;transition:background .3s}
+.svc:hover{background:var(--bg3)}
+.svc::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(var(--sand),var(--clay));transition:height .4s}
+.svc:hover::before{height:100%}
+.svc .num{font-family:var(--fm);font-size:.72rem;color:var(--clay-glow);opacity:.8;letter-spacing:.12em}
+.svc .ic{width:42px;height:42px;color:var(--clay-glow);margin:1rem 0 1.1rem}
+.svc h3{font-family:var(--fd);font-weight:700;font-size:1.55rem;margin-bottom:.6rem}
+.svc p{color:var(--ink-dim);font-size:.95rem;line-height:1.7;margin-bottom:1.1rem}
+.svc .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.svc .tags span{background:rgba(255,255,255,.05);border:1px solid var(--line);padding:.18rem .65rem;border-radius:5px;font-size:.74rem;color:var(--sand)}
+
+/* ── PINNED SCROLL-TELLING ── */
+.process{position:relative;background:var(--bg)}
+.process-track{position:relative;height:300vh}
+.process-sticky{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.process-sticky .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;width:100%}
+.proc-media{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:5/6}
+.proc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s,transform .9s}
+.proc-media img.on{opacity:1;transform:scale(1)}
+.proc-steps{position:relative}
+.proc-prog{height:3px;background:var(--line);border-radius:3px;margin-bottom:2.2rem;overflow:hidden}
+.proc-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--clay),var(--sand));transition:width .25s}
+.proc-step{opacity:.3;transition:opacity .4s;padding:1rem 0}
+.proc-step.on{opacity:1}
+.proc-step .k{font-family:var(--fm);color:var(--clay-glow);font-size:.8rem;letter-spacing:.1em}
+.proc-step h3{font-family:var(--fd);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.05;margin:.3rem 0 .5rem}
+.proc-step p{color:var(--ink-dim);max-width:44ch}
+
+/* ── BEFORE / AFTER ── */
+.transform{background:var(--bg2)}
+.ba{position:relative;max-width:960px;margin:3rem auto 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:ew-resize;user-select:none;touch-action:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.ba img{display:block;width:100%;height:auto;pointer-events:none}
+.ba .ba-after-wrap{display:block}
+.ba .ba-before-wrap{position:absolute;inset:0;width:50%;overflow:hidden}
+.ba .ba-before-wrap img{position:absolute;top:0;left:0;height:100%;width:auto;max-width:none;object-fit:cover}
+.ba .lab{position:absolute;top:1rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:.34rem .7rem;border-radius:6px;background:rgba(21,17,14,.78);backdrop-filter:blur(6px);color:var(--ink);z-index:3}
+.ba .lab.before{left:1rem;color:var(--sand)}
+.ba .lab.after{right:1rem;color:var(--clay-glow)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--ink);transform:translateX(-50%);z-index:4;box-shadow:0 0 14px rgba(0,0,0,.5)}
+.ba .grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--clay);color:#16110D;display:grid;place-items:center;z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.ba .grip svg{width:24px;height:24px}
+.ba .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:6}
+
+/* ── GALLERY ── */
+.gallery{background:var(--bg)}
+.gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:14px;margin-top:3rem}
+.gal{position:relative;overflow:hidden;border-radius:12px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gal:hover img{transform:scale(1.07)}
+.gal::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 55%);opacity:0;transition:opacity .3s}
+.gal:hover::after{opacity:1}
+.gal.a{grid-column:span 4;grid-row:span 2}
+.gal.b{grid-column:span 2;grid-row:span 1}
+.gal.c{grid-column:span 2;grid-row:span 1}
+.gal.d{grid-column:span 2;grid-row:span 2}
+.gal.e{grid-column:span 2;grid-row:span 1}
+.gal.f{grid-column:span 2;grid-row:span 1}
+
+/* ── REPUTATION ── */
+.rep{background:var(--bg2)}
+.rep-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.rep-card{background:var(--bg);border:1px solid var(--line-warm);border-radius:18px;padding:2.4rem;text-align:center}
+.rep-card .big{font-family:var(--fd);font-weight:900;font-size:4.5rem;line-height:.9;color:var(--clay-glow)}
+.rep-card .sub{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-top:.6rem}
+.rep-card .div{height:1px;background:var(--line);margin:1.6rem 0}
+.rep-card .yr{font-family:var(--fd);font-weight:700;font-size:1.8rem;color:var(--ink)}
+.pull{font-family:var(--fd);font-style:italic;font-weight:500;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.4;color:var(--ink)}
+.pull .mark{color:var(--clay);font-weight:700}
+.pull-who{margin-top:1.3rem;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--sand)}
+.rep-cta{margin-top:1.8rem;display:flex;gap:.7rem;flex-wrap:wrap}
+.rep-cta .btn{padding:.7rem 1.3rem;font-size:.9rem}
+
+/* ── QUOTE ── */
+.quote{background:var(--bg)}
+.quote-card{max-width:780px;margin:2.4rem auto 0;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:clamp(1.6rem,4vw,3rem)}
+.lead-form{display:grid;gap:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sand)}
+.fg input,.fg select,.fg textarea{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--ink);
+  padding:.8rem 1rem;border-radius:9px;font-family:var(--fb);font-size:1rem;transition:border-color .2s;width:100%;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--clay)}
+.fg select option{background:var(--bg2)}
+.fg textarea{resize:vertical;min-height:110px}
+.lead-form .btn-clay{width:100%;justify-content:center;margin-top:.4rem}
+.form-ok{color:#7bd4a6;font-size:1.08rem;font-weight:600;text-align:center;padding:1.6rem}
+.form-err{color:#f0938a;font-size:.95rem;text-align:center;padding:.6rem}
+input[name=_honey]{display:none!important}
+
+/* ── CONTACT ── */
+.contact{background:var(--bg2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.ci{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.6rem}
+.ci .ic{flex:0 0 auto;width:40px;height:40px;border-radius:9px;background:rgba(200,100,60,.12);border:1px solid var(--line-warm);display:grid;place-items:center;color:var(--clay-glow)}
+.ci .ic svg{width:18px;height:18px}
+.ci .lab{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim)}
+.ci .val{font-size:1.05rem;font-weight:600}
+.ci .val a:hover{color:var(--clay-glow)}
+.c-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.8rem}
+.c-actions .btn{padding:.7rem 1.3rem;font-size:.9rem}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:400px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.04) saturate(1.05)}
+
+/* ── FOOTER ── */
+footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.f-brand{font-family:var(--fd);font-weight:700;font-size:1.2rem;letter-spacing:.01em}
+.f-brand b{color:var(--clay-glow)}
+.f-copy{font-size:.78rem;color:var(--ink-dim)}
+.f-links{display:flex;gap:1.4rem}
+.f-links a{font-size:.84rem;color:var(--ink-dim);transition:color .2s}
+.f-links a:hover{color:var(--clay-glow)}
+
+/* ── STICKY MOBILE BAR ── */
+.mbar{display:none;position:fixed;inset:auto 0 0 0;z-index:130;background:rgba(21,17,14,.97);border-top:1px solid var(--line-warm);backdrop-filter:blur(12px)}
+.mbar .in{display:grid;grid-template-columns:repeat(3,1fr);height:62px}
+.mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.18rem;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-right:1px solid var(--line)}
+.mbar a:last-child{border-right:none}
+.mbar a svg{width:20px;height:20px;color:var(--clay-glow)}
+.mbar a.call{color:var(--clay-glow)}
+
+/* ── reveals ── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+/* ── responsive ── */
+@media(max-width:900px){
+  .about-grid,.contact-grid,.process-sticky .wrap,.rep-grid{grid-template-columns:1fr}
+  .about-photo{aspect-ratio:3/2;max-height:340px}
+  .svc-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr;gap:1.8rem}
+  .stat+.stat{border-left:none}
+  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid var(--line);padding-top:1.8rem}
+  .gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .gal.a,.gal.d{grid-column:span 2;grid-row:span 2}
+  .gal.b,.gal.c,.gal.e,.gal.f{grid-column:span 1;grid-row:span 1}
+  .process-track{height:auto}
+  .process-sticky{position:relative;height:auto;padding:2rem 0}
+  .proc-media{aspect-ratio:3/2;margin-bottom:1.5rem}
+  .proc-step{opacity:1}
+  .rep-card{max-width:420px;margin:0 auto}
+}
+@media(max-width:680px){
+  .nav-links{
+    position:fixed;inset:68px 0 auto 0;flex-direction:column;gap:0;
+    background:#19140F;border-bottom:1px solid var(--clay);
+    max-height:0;overflow:hidden;transition:max-height .35s;padding:0 6vw;
+  }
+  body.menu .nav-links{max-height:420px;padding:.5rem 6vw 1.2rem}
+  .nav-links a{width:100%;padding:.9rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .nav-cta{text-align:center;margin-top:.6rem}
+  .burger{display:block}
+  .nav-tel{display:none}
+  .mbar{display:block}
+  body{padding-bottom:62px}
+  footer{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .proc-media img{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="#top"><span class="glyph"></span>Tile<b>&nbsp;Craftworks</b></a>
+  <div class="nav-links" id="links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#transform">Transformations</a>
+    <a href="tel:+16127236627" class="nav-tel">(612) 723-6627</a>
+    <a href="#quote" class="nav-cta">Free Quote</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg"><img id="heroImg" src="images/hero.jpg" alt="Custom-tiled walk-in shower with a wood bench"></div>
+  <div class="hero-inner wrap">
+    <span class="eyebrow">Custom Tile · Brainerd Lakes, MN</span>
+    <h1>Handcrafted <em>Tile,</em><br>Built to Last.</h1>
+    <p class="lede">Custom showers, backsplashes, floors and kitchens — laid by hand with 25 years of craftsmanship, across the Brainerd Lakes area.</p>
+    <div class="hero-cta">
+      <a href="#quote" class="btn btn-clay">Get a Free Quote →</a>
+      <a href="#work" class="btn btn-ghost">See Our Work</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="rail"></span>Scroll</div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat"><div class="n">A+</div><div class="l">BBB Rated</div></div>
+      <div class="stat"><div class="n">25+</div><div class="l">Years of Craftsmanship</div></div>
+      <div class="stat"><div class="n">Since 2016</div><div class="l">Serving the Lakes</div></div>
+      <div class="stat"><div class="n">Custom</div><div class="l">Every Single Job</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo rv">
+      <img src="images/about.jpg" alt="Custom patterned tile shower wall by Tile Craftworks" loading="lazy">
+      <div class="tag"><span class="s">A+</span><span class="t">BBB<br>Rated</span></div>
+    </div>
+    <div>
+      <span class="eyebrow rv">About Tile Craftworks</span>
+      <h2 class="h-title rv d1">A Lakes-Area Tile<br><em>Craftsman</em></h2>
+      <div class="rv d2">
+        <p class="lede" style="margin-top:1.4rem">Tile Craftworks is owner Brett Dean's shop — a small, hands-on tile business serving the Brainerd Lakes area since 2016, backed by 25 years in the trade. Every shower, floor, and backsplash is set by hand, with the patience and precision that tile demands.</p>
+        <p class="lede">From a simple kitchen backsplash to a fully reimagined bathroom, the goal is the same: clean lines, lasting work, and a finish you'll be proud of for decades. A+ rated by the BBB, and built one careful job at a time.</p>
+      </div>
+      <div class="badges rv d3">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>A+ BBB Rated</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>25 Years Experience</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 3h18v18H3z"/><path d="M3 12h18M12 3v18"/></svg>Custom Craftsmanship</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Free Quotes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tilestrip"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <span class="eyebrow rv">What We Do</span>
+    <h2 class="h-title rv d1">Tile Done <em>Right</em></h2>
+    <div class="svc-grid">
+      <div class="svc rv">
+        <div class="num">01</div>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3h16v18H4z"/><path d="M9 21V11h6v10M9 7h.01M15 7h.01"/></svg>
+        <h3>Showers &amp; Baths</h3>
+        <p>Custom walk-in showers, tub surrounds, niches, and benches — waterproofed and set to last, with the detail that makes a bathroom feel finished.</p>
+        <div class="tags"><span>Walk-In Showers</span><span>Tub Surrounds</span><span>Niches</span><span>Curbless</span></div>
+      </div>
+      <div class="svc rv d1">
+        <div class="num">02</div>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 3v6M15 9v12M3 15h6"/></svg>
+        <h3>Backsplashes</h3>
+        <p>The detail everyone notices. Subway, mosaic, herringbone, or natural stone — a kitchen or bar backsplash that ties the whole room together.</p>
+        <div class="tags"><span>Kitchen</span><span>Subway</span><span>Mosaic</span><span>Herringbone</span></div>
+      </div>
+      <div class="svc rv">
+        <div class="num">03</div>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="M3 8h18M3 13h18M3 18h18M8 3v18M13 3v18M18 3v18"/></svg>
+        <h3>Tile Flooring</h3>
+        <p>Porcelain, ceramic, and stone floors laid flat, level, and lined up right — including warm, easy-to-clean heated bathroom and entry floors.</p>
+        <div class="tags"><span>Porcelain</span><span>Natural Stone</span><span>Heated Floors</span><span>Entryways</span></div>
+      </div>
+      <div class="svc rv d1">
+        <div class="num">04</div>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6M3 8h18"/></svg>
+        <h3>Kitchens &amp; Remodels</h3>
+        <p>The tile work that pulls a remodel together — backsplashes, floors, fireplace surrounds, and accent walls, coordinated with your other trades.</p>
+        <div class="tags"><span>Backsplash</span><span>Floors</span><span>Fireplace</span><span>Accent Walls</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PINNED PROCESS -->
+<section class="process">
+  <div class="process-track" id="procTrack">
+    <div class="process-sticky">
+      <div class="wrap">
+        <div class="proc-media">
+          <img class="pm on" src="images/proc-1.jpg" alt="Choosing a tile pattern and layout">
+          <img class="pm" src="images/proc-2.jpg" alt="Bathroom prepped for new tile">
+          <img class="pm" src="images/proc-3.jpg" alt="Finished, freshly tiled bathroom">
+        </div>
+        <div class="proc-steps">
+          <span class="eyebrow">How Your Project Comes Together</span>
+          <div class="proc-prog"><i id="procBar"></i></div>
+          <div class="proc-step on" data-i="0">
+            <div class="k">Step 01</div><h3>Design &amp; Select</h3>
+            <p>We start with your space and your style — tile, layout, and pattern. You'll get a clear, honest quote with no surprises before any work begins.</p>
+          </div>
+          <div class="proc-step" data-i="1">
+            <div class="k">Step 02</div><h3>Prep &amp; Layout</h3>
+            <p>The part that makes tile last: proper surface prep, waterproofing, and a layout snapped out so every line runs true and every cut lands right.</p>
+          </div>
+          <div class="proc-step" data-i="2">
+            <div class="k">Step 03</div><h3>Set &amp; Reveal</h3>
+            <p>Tile set by hand, grouted clean, and finished with care — then a final walk-through, so you're thrilled with it before we call it done.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="transform" id="transform">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow rv" style="justify-content:center">See the Difference</span>
+    <h2 class="h-title rv d1">From Dated to <em>Done</em></h2>
+    <p class="lede rv d2" style="margin:1rem auto 0">Drag the slider to see what fresh tile can do for a tired room.</p>
+  </div>
+  <div class="wrap">
+    <div class="ba rv" id="ba">
+      <div class="ba-after-wrap"><img src="images/after.jpg" alt="Beautifully renovated tiled bathroom — after"></div>
+      <div class="ba-before-wrap" id="baBefore"><img id="baBeforeImg" src="images/before.jpg" alt="Dated bathroom before renovation"></div>
+      <span class="lab before">Before</span>
+      <span class="lab after">After</span>
+      <div class="handle" id="baHandle"></div>
+      <div class="grip" id="baGrip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
+      <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Before and after slider">
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="work">
+  <div class="wrap">
+    <span class="eyebrow rv">Our Work</span>
+    <h2 class="h-title rv d1">Craftsmanship<br><em>You Can See</em></h2>
+    <div class="gal-grid">
+      <div class="gal a rv"><img src="images/g1.jpg" alt="Luxury tiled bathroom with glass shower" loading="lazy"></div>
+      <div class="gal b rv d1"><img src="images/g2.jpg" alt="White subway-tile kitchen backsplash" loading="lazy"></div>
+      <div class="gal c rv d2"><img src="images/g3.jpg" alt="Herringbone tile detail" loading="lazy"></div>
+      <div class="gal d rv d1"><img src="images/g4.jpg" alt="Hand-set decorative mosaic tile" loading="lazy"></div>
+      <div class="gal e rv d2"><img src="images/g5.jpg" alt="Subway-tile backsplash" loading="lazy"></div>
+      <div class="gal f rv d3"><img src="images/g6.jpg" alt="Subway-tiled walk-in shower" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<div class="tilestrip"></div>
+
+<!-- REPUTATION -->
+<section class="rep" id="reputation">
+  <div class="wrap rep-grid">
+    <div class="rep-card rv">
+      <div class="big">A+</div>
+      <div class="sub">BBB Rating</div>
+      <div class="div"></div>
+      <div class="yr">25 Years</div>
+      <div class="sub">In the Trade</div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Built on Reputation</span>
+      <h2 class="h-title rv d1" style="margin-bottom:1.6rem">Work Worth <em>Trusting</em></h2>
+      <p class="pull rv d2"><span class="mark">"</span>A young company with 25 years of experience — we take real pride in giving great service and delivering beautiful projects that last.<span class="mark">"</span></p>
+      <div class="pull-who rv d2">— Tile Craftworks, on the work they do</div>
+      <div class="rep-cta rv d3">
+        <a href="https://www.facebook.com/TileCraftworks/" target="_blank" rel="noopener" class="btn btn-ghost">See Our Work on Facebook</a>
+        <a href="#quote" class="btn btn-clay">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow rv" style="justify-content:center">No Commitment</span>
+    <h2 class="h-title rv d1">Get Your <em>Free Quote</em></h2>
+    <p class="lede rv d2" style="margin:1rem auto 0">Tell us about your project — a backsplash, a shower, a whole floor. Brett will get back to you to talk tile.</p>
+  </div>
+  <div class="wrap">
+    <div class="quote-card rv">
+      <form id="leadForm" class="lead-form">
+        <div class="row2">
+          <div class="fg"><label for="n">Your Name</label><input id="n" name="name" placeholder="First Last" required></div>
+          <div class="fg"><label for="p">Phone</label><input id="p" name="phone" type="tel" placeholder="(218) 000-0000" required></div>
+        </div>
+        <div class="fg"><label for="s">Type of Project</label>
+          <select id="s" name="project" required>
+            <option value="" disabled selected>Select a project…</option>
+            <option>Shower / Bath Tile</option>
+            <option>Kitchen / Bar Backsplash</option>
+            <option>Tile Flooring</option>
+            <option>Full Kitchen or Bath Remodel</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="fg"><label for="e">Email (optional)</label><input id="e" name="email" type="email" placeholder="you@example.com"></div>
+        <div class="fg"><label for="m">Tell Us About It</label><textarea id="m" name="message" placeholder="What room, roughly what size, and the look you're after? A photo helps — text one to (612) 723-6627." required></textarea></div>
+        <input type="hidden" name="_subject" value="New quote request — Tile Craftworks website">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn btn-clay">Send My Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow rv">Get In Touch</span>
+      <h2 class="h-title rv d1">Talk to <em>Brett</em></h2>
+      <div style="margin-top:2rem">
+        <div class="ci rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L7.9 9.9a16 16 0 006.2 6.2l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg></div><div><div class="lab">Call or Text</div><div class="val"><a href="tel:+16127236627">(612) 723-6627</a></div></div></div>
+        <div class="ci rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="lab">Follow / Message</div><div class="val"><a href="https://www.facebook.com/TileCraftworks/" target="_blank" rel="noopener">facebook.com/TileCraftworks</a></div></div></div>
+        <div class="ci rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="lab">Service Area</div><div class="val">Nisswa · Pequot Lakes · Brainerd · Crosslake &amp; the Lakes area</div></div></div>
+      </div>
+      <div class="c-actions rv d2">
+        <a href="tel:+16127236627" class="btn btn-clay">Call Now</a>
+        <a href="sms:+16127236627" class="btn btn-ghost">Send a Text</a>
+        <a href="https://www.facebook.com/TileCraftworks/" target="_blank" rel="noopener" class="btn btn-ghost">Facebook</a>
+      </div>
+    </div>
+    <div class="map rv d1">
+      <iframe src="https://www.google.com/maps?q=Nisswa,+MN+56468&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tile Craftworks — Brainerd Lakes area, MN" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">Tile<b> Craftworks</b></div>
+  <div class="f-copy">© 2026 Tile Craftworks, LLC · Brainerd Lakes Area, MN · A+ BBB Rated</div>
+  <div class="f-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#quote">Free Quote</a><a href="tel:+16127236627">(612) 723-6627</a></div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mbar"><div class="in">
+  <a class="call" href="tel:+16127236627"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L7.9 9.9a16 16 0 006.2 6.2l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg>Call</a>
+  <a href="sms:+16127236627"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Text</a>
+  <a href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 3h16v18H3z" transform="translate(0.5 0)"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Quote</a>
+</div></div>
+
+<script>
+(function(){
+  var doc=document, body=doc.body;
+
+  // ── mobile menu ──
+  var burger=doc.getElementById('burger'), links=doc.getElementById('links');
+  burger.addEventListener('click',function(){
+    var open=body.classList.toggle('menu');
+    burger.setAttribute('aria-expanded',open);
+  });
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){body.classList.remove('menu');burger.setAttribute('aria-expanded',false);});});
+
+  // ── reveals ──
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  doc.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  // ── pinned process + hero parallax (single rAF scroll handler) ──
+  var heroImg=doc.getElementById('heroImg');
+  var track=doc.getElementById('procTrack');
+  var bar=doc.getElementById('procBar');
+  var media=Array.prototype.slice.call(doc.querySelectorAll('.proc-media .pm'));
+  var steps=Array.prototype.slice.call(doc.querySelectorAll('.proc-step'));
+  var ticking=false;
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset, vh=window.innerHeight;
+    if(heroImg && y<vh*1.3 && !reduce){ heroImg.style.transform='translateY('+(y*0.16)+'px)'; }
+    if(track){
+      var r=track.getBoundingClientRect();
+      var total=track.offsetHeight-vh;
+      var prog=Math.min(Math.max(-r.top/total,0),1);
+      if(bar) bar.style.width=(prog*100)+'%';
+      var idx=Math.min(steps.length-1, Math.floor(prog*steps.length));
+      media.forEach(function(m,i){m.classList.toggle('on',i===idx);});
+      steps.forEach(function(s,i){s.classList.toggle('on',i===idx);});
+    }
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){requestAnimationFrame(onScroll);ticking=true;} },{passive:true});
+  onScroll();
+
+  // ── before / after slider ──
+  var ba=doc.getElementById('ba'), baBefore=doc.getElementById('baBefore'),
+      baBeforeImg=doc.getElementById('baBeforeImg'), baHandle=doc.getElementById('baHandle'),
+      baGrip=doc.getElementById('baGrip'), baRange=doc.getElementById('baRange');
+  function sizeBefore(){ if(ba && baBeforeImg){ baBeforeImg.style.width=ba.clientWidth+'px'; } }
+  function setBA(p){
+    p=Math.min(Math.max(p,0),100);
+    if(baBefore) baBefore.style.width=p+'%';
+    if(baHandle) baHandle.style.left=p+'%';
+    if(baGrip) baGrip.style.left=p+'%';
+  }
+  if(baRange){
+    baRange.addEventListener('input',function(){ setBA(parseFloat(baRange.value)); });
+    sizeBefore(); setBA(50);
+    window.addEventListener('resize',sizeBefore);
+    // also support direct drag on the whole element
+    var dragging=false;
+    function fromEvent(clientX){
+      var r=ba.getBoundingClientRect();
+      var p=((clientX-r.left)/r.width)*100;
+      baRange.value=p; setBA(p);
+    }
+    ba.addEventListener('pointerdown',function(e){ dragging=true; fromEvent(e.clientX); });
+    window.addEventListener('pointermove',function(e){ if(dragging) fromEvent(e.clientX); });
+    window.addEventListener('pointerup',function(){ dragging=false; });
+  }
+
+  // ── lead form (FormSubmit AJAX) ──
+  var FORM="https://formsubmit.co/ajax/elit@lakecountryschool.org";
+  var form=doc.getElementById('leadForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button'); btn.disabled=true; btn.textContent='Sending…';
+    fetch(FORM,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(form)))})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success==='true'||j.success===true){
+          form.innerHTML='<p class="form-ok">✓ Got it — Brett will be in touch shortly. You can also call or text him directly at (612) 723-6627.</p>';
+        } else throw new Error();
+      })
+      .catch(function(){
+        btn.disabled=false; btn.textContent='Send My Request →';
+        if(!form.querySelector('.form-err')) form.insertAdjacentHTML('beforeend','<p class="form-err">Something went wrong — please call or text Brett at (612) 723-6627.</p>');
+      });
+  });
+})();
+</script>
+</body>
+</html>
