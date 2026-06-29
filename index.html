@@ -235,18 +235,15 @@ body.menu .burger span:nth-child(3){top:19px;transform:rotate(-45deg)}
 
 /* ── BEFORE / AFTER ── */
 .transform{background:var(--bg2)}
-.ba{position:relative;max-width:960px;margin:3rem auto 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:ew-resize;user-select:none;touch-action:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
-.ba img{display:block;width:100%;height:auto;pointer-events:none}
-.ba .ba-after-wrap{display:block}
-.ba .ba-before-wrap{position:absolute;inset:0;width:50%;overflow:hidden}
-.ba .ba-before-wrap img{position:absolute;top:0;left:0;height:100%;width:auto;max-width:none;object-fit:cover}
+.ba{position:relative;max-width:960px;margin:3rem auto 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:ew-resize;user-select:none;touch-action:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);aspect-ratio:16/10;background:var(--bg3)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:block}
+.ba .ba-before-img{z-index:2;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
 .ba .lab{position:absolute;top:1rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:.34rem .7rem;border-radius:6px;background:rgba(21,17,14,.78);backdrop-filter:blur(6px);color:var(--ink);z-index:3}
 .ba .lab.before{left:1rem;color:var(--sand)}
 .ba .lab.after{right:1rem;color:var(--clay-glow)}
-.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--ink);transform:translateX(-50%);z-index:4;box-shadow:0 0 14px rgba(0,0,0,.5)}
-.ba .grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--clay);color:#16110D;display:grid;place-items:center;z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:var(--ink);transform:translateX(-50%);z-index:4;box-shadow:0 0 14px rgba(0,0,0,.5);pointer-events:none}
+.ba .grip{position:absolute;top:50%;left:var(--p,50%);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--clay);color:#16110D;display:grid;place-items:center;z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.5);pointer-events:none}
 .ba .grip svg{width:24px;height:24px}
-.ba .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:6}
 
 /* ── GALLERY ── */
 .gallery{background:var(--bg)}
@@ -406,7 +403,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="hero-bg"><img id="heroImg" src="images/hero.jpg" alt="Custom-tiled walk-in shower with a wood bench"></div>
+  <div class="hero-bg"><img id="heroImg" src="images/hero.jpg" alt="Wall of handcrafted patterned tile behind a vanity"></div>
   <div class="hero-inner wrap">
     <span class="eyebrow">Custom Tile · Brainerd Lakes, MN</span>
     <h1>Handcrafted <em>Tile,</em><br>Built to Last.</h1>
@@ -534,14 +531,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;
     <p class="lede rv d2" style="margin:1rem auto 0">Drag the slider to see what fresh tile can do for a tired room.</p>
   </div>
   <div class="wrap">
-    <div class="ba rv" id="ba">
-      <div class="ba-after-wrap"><img src="images/after.jpg" alt="Beautifully renovated tiled bathroom — after"></div>
-      <div class="ba-before-wrap" id="baBefore"><img id="baBeforeImg" src="images/before.jpg" alt="Dated bathroom before renovation"></div>
+    <div class="ba rv" id="ba" style="--p:50%" role="slider" aria-label="Before and after slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+      <img class="ba-after-img" src="images/after.jpg" alt="Beautifully renovated tiled bathroom — after">
+      <img class="ba-before-img" src="images/before.jpg" alt="Dated bathroom before renovation">
       <span class="lab before">Before</span>
       <span class="lab after">After</span>
-      <div class="handle" id="baHandle"></div>
-      <div class="grip" id="baGrip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
-      <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Before and after slider">
+      <div class="handle"></div>
+      <div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
     </div>
   </div>
 </section>
@@ -724,31 +720,29 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2.6rem 6vw;
   window.addEventListener('scroll',function(){ if(!ticking){requestAnimationFrame(onScroll);ticking=true;} },{passive:true});
   onScroll();
 
-  // ── before / after slider ──
-  var ba=doc.getElementById('ba'), baBefore=doc.getElementById('baBefore'),
-      baBeforeImg=doc.getElementById('baBeforeImg'), baHandle=doc.getElementById('baHandle'),
-      baGrip=doc.getElementById('baGrip'), baRange=doc.getElementById('baRange');
-  function sizeBefore(){ if(ba && baBeforeImg){ baBeforeImg.style.width=ba.clientWidth+'px'; } }
-  function setBA(p){
-    p=Math.min(Math.max(p,0),100);
-    if(baBefore) baBefore.style.width=p+'%';
-    if(baHandle) baHandle.style.left=p+'%';
-    if(baGrip) baGrip.style.left=p+'%';
-  }
-  if(baRange){
-    baRange.addEventListener('input',function(){ setBA(parseFloat(baRange.value)); });
-    sizeBefore(); setBA(50);
-    window.addEventListener('resize',sizeBefore);
-    // also support direct drag on the whole element
+  // ── before / after slider (clip-path; pointer + keyboard) ──
+  var ba=doc.getElementById('ba');
+  if(ba){
     var dragging=false;
-    function fromEvent(clientX){
-      var r=ba.getBoundingClientRect();
-      var p=((clientX-r.left)/r.width)*100;
-      baRange.value=p; setBA(p);
+    function setBA(p){
+      p=Math.min(Math.max(p,0),100);
+      ba.style.setProperty('--p', p+'%');
+      ba.setAttribute('aria-valuenow', Math.round(p));
     }
-    ba.addEventListener('pointerdown',function(e){ dragging=true; fromEvent(e.clientX); });
-    window.addEventListener('pointermove',function(e){ if(dragging) fromEvent(e.clientX); });
-    window.addEventListener('pointerup',function(){ dragging=false; });
+    function fromX(clientX){
+      var r=ba.getBoundingClientRect();
+      setBA(((clientX-r.left)/r.width)*100);
+    }
+    ba.addEventListener('pointerdown',function(e){ dragging=true; ba.setPointerCapture(e.pointerId); fromX(e.clientX); });
+    ba.addEventListener('pointermove',function(e){ if(dragging) fromX(e.clientX); });
+    ba.addEventListener('pointerup',function(e){ dragging=false; try{ba.releasePointerCapture(e.pointerId);}catch(_){} });
+    ba.addEventListener('pointercancel',function(){ dragging=false; });
+    ba.addEventListener('keydown',function(e){
+      var cur=parseFloat(ba.getAttribute('aria-valuenow'))||50;
+      if(e.key==='ArrowLeft'){ setBA(cur-4); e.preventDefault(); }
+      else if(e.key==='ArrowRight'){ setBA(cur+4); e.preventDefault(); }
+    });
+    setBA(50);
   }
 
   // ── lead form (FormSubmit AJAX) ──
